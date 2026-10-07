@@ -1,0 +1,7 @@
+com.licham.widget.calendar-widget-pngs-0 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/build/generated/res/pngs/release
+com.licham.widget.calendar-widget-resValues-1 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/build/generated/res/resValues/release
+com.licham.widget.calendar-widget-mergeReleaseResources-2 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.licham.widget.calendar-widget-mergeReleaseResources-3 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.licham.widget.calendar-widget-release-4 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/build/intermediates/merged_res/release/mergeReleaseResources
+com.licham.widget.calendar-widget-main-5 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res
+com.licham.widget.calendar-widget-release-6 /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/release/res

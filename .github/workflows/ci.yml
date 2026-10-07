@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint --workspace=@lich-am/mobile
+      - run: npm run test --workspace=@lich-am/mobile
+      - run: npm run lint --workspace=@lich-am/desktop
+      - run: npm run build:web --workspace=@lich-am/desktop
+      - run: npm run lint --workspace=@lich-am/ui
+      - run: npm run test --workspace=@lich-am/ui

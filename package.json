@@ -1,0 +1,33 @@
+{
+  "name": "lich-am",
+  "version": "0.1.1",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:mobile": "npm run start --workspace=@lich-am/mobile",
+    "dev:desktop": "npm run dev --workspace=@lich-am/desktop",
+    "build": "turbo run build",
+    "release:android": "npm run release:android --workspace=@lich-am/mobile",
+    "release:android:apk": "npm run release:android:apk --workspace=@lich-am/mobile",
+    "release:ios": "npm run release:ios --workspace=@lich-am/mobile",
+    "release:macos": "npm run release:macos --workspace=@lich-am/desktop",
+    "release:windows": "npm run release:windows --workspace=@lich-am/desktop",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "version:mobile": "node apps/mobile/scripts/mobile-version.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "turbo": "^2.10.12",
+    "typescript": "~6.0.3",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": "^20.19.4 || ^22.13.0 || >=24.3.0"
+  },
+  "packageManager": "npm@10.9.7"
+}

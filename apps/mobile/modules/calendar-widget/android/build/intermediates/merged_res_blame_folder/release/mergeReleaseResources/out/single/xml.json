@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.licham.widget.calendar-widget-release-3:/xml/calendar_widget_shortcuts.xml",
+        "source": "com.licham.widget.calendar-widget-main-4:/xml/calendar_widget_shortcuts.xml"
+    },
+    {
+        "merged": "com.licham.widget.calendar-widget-release-3:/xml/calendar_widget_info.xml",
+        "source": "com.licham.widget.calendar-widget-main-4:/xml/calendar_widget_info.xml"
+    }
+]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="calendar_widget_background">#F7F7F4</color>
+  <color name="calendar_widget_text">#20211F</color>
+  <color name="calendar_widget_muted">#73766F</color>
+  <color name="calendar_widget_accent">#A33A2B</color>
+  <color name="calendar_widget_lunar_background">#F3E4DF</color>
+</resources>

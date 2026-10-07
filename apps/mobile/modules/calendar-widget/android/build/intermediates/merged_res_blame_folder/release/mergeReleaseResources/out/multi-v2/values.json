@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.licham.widget.calendar-widget-mergeReleaseResources-1:/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,6,5,12,2,4,8,9,10,11,7",
+                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2",
+                        "startOffsets": "110,346,276,794,53,203,472,539,632,702,407",
+                        "endColumns": "92,60,69,134,56,72,66,92,69,91,64",
+                        "endOffsets": "200,404,343,926,107,273,536,629,699,791,469"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "351,446,509,581,718,777,852,921,1016,1088,1182",
+                        "endColumns": "94,62,71,136,58,74,68,94,71,93,66",
+                        "endOffsets": "441,504,576,713,772,847,916,1011,1083,1177,1244"
+                    }
+                },
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "5,2,6,4,3",
+                        "startColumns": "2,2,2,2,2",
+                        "startOffsets": "219,53,274,165,112",
+                        "endColumns": "54,58,64,53,52",
+                        "endOffsets": "271,109,336,216,162"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,240,296",
+                        "endColumns": "56,60,66,55,54",
+                        "endOffsets": "107,168,235,291,346"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.licham.widget.calendar-widget-release-3:/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,6,5,12,2,4,8,9,10,11,7",
+                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2",
+                        "startOffsets": "110,346,276,794,53,203,472,539,632,702,407",
+                        "endColumns": "92,60,69,134,56,72,66,92,69,91,64",
+                        "endOffsets": "200,404,343,926,107,273,536,629,699,791,469"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "351,446,509,581,718,777,852,921,1016,1088,1182",
+                        "endColumns": "94,62,71,136,58,74,68,94,71,93,66",
+                        "endOffsets": "441,504,576,713,772,847,916,1011,1083,1177,1244"
+                    }
+                },
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "5,2,6,4,3",
+                        "startColumns": "2,2,2,2,2",
+                        "startOffsets": "219,53,274,165,112",
+                        "endColumns": "54,58,64,53,52",
+                        "endOffsets": "271,109,336,216,162"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,240,296",
+                        "endColumns": "56,60,66,55,54",
+                        "endOffsets": "107,168,235,291,346"
+                    }
+                }
+            ]
+        }
+    ]
+}

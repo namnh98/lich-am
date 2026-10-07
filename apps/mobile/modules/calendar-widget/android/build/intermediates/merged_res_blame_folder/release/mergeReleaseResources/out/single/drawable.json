@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_background.xml",
+        "source": "com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_background.xml"
+    },
+    {
+        "merged": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_background_dark.xml",
+        "source": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_background_dark.xml"
+    },
+    {
+        "merged": "com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_lunar_badge.xml",
+        "source": "com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_lunar_badge.xml"
+    },
+    {
+        "merged": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_lunar_badge.xml",
+        "source": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_lunar_badge.xml"
+    },
+    {
+        "merged": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_shortcut_settings.xml",
+        "source": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_shortcut_settings.xml"
+    },
+    {
+        "merged": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_shortcut_add.xml",
+        "source": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_shortcut_add.xml"
+    },
+    {
+        "merged": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-release-3:/drawable/calendar_widget_background.xml",
+        "source": "/Users/namnguyenne/.gradle/daemon/9.3.1/com.licham.widget.calendar-widget-main-4:/drawable/calendar_widget_background.xml"
+    }
+]

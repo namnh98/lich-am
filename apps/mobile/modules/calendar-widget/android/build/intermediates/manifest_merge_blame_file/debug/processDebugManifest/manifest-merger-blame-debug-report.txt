@@ -1,0 +1,70 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.licham.widget" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6
+7    <application>
+7-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:2:3-31:17
+8        <activity android:name="com.licham.mobile.MainActivity" >
+8-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:3:5-8:16
+8-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:4:7-52
+9            <meta-data
+9-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:5:7-7:61
+10                android:name="android.app.shortcuts"
+10-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:6:9-45
+11                android:resource="@xml/calendar_widget_shortcuts" />
+11-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:7:9-58
+12        </activity>
+13        <activity
+13-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:9:5-14:69
+14            android:name="com.licham.widget.CalendarWidgetPinActivity"
+14-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:10:7-65
+15            android:excludeFromRecents="true"
+15-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:11:7-40
+16            android:exported="true"
+16-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:12:7-30
+17            android:noHistory="true"
+17-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:13:7-31
+18            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+18-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:14:7-66
+19
+20        <receiver
+20-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:15:5-30:16
+21            android:name="com.licham.widget.CalendarWidgetProvider"
+21-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:16:7-62
+22            android:exported="true"
+22-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:17:7-30
+23            android:label="@string/calendar_widget_name"
+23-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:18:7-51
+24            android:permission="android.permission.BIND_APPWIDGET" >
+24-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:19:7-61
+25            <intent-filter>
+25-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:20:7-26:23
+26                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+26-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:21:9-76
+26-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:21:17-73
+27                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+27-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:22:9-76
+27-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:22:17-73
+28                <action android:name="android.intent.action.DATE_CHANGED" />
+28-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:23:9-69
+28-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:23:17-66
+29                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+29-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:24:9-73
+29-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:24:17-70
+30                <action android:name="android.intent.action.LOCALE_CHANGED" />
+30-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:25:9-71
+30-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:25:17-68
+31            </intent-filter>
+32
+33            <meta-data
+33-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:27:7-29:56
+34                android:name="android.appwidget.provider"
+34-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:28:9-50
+35                android:resource="@xml/calendar_widget_info" />
+35-->/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:29:9-53
+36        </receiver>
+37    </application>
+38
+39</manifest>

@@ -1,0 +1,20 @@
+node_modules/
+.turbo/
+dist/
+coverage/
+.expo/
+.DS_Store
+
+# Expo native output created by prebuild
+apps/mobile/android/
+apps/mobile/ios/
+
+# Rust / Tauri
+apps/desktop/src-tauri/target/
+
+# Local environment
+.env
+.env.*
+!.env.example
+!apps/mobile/.env.example
+!apps/desktop/.env.example

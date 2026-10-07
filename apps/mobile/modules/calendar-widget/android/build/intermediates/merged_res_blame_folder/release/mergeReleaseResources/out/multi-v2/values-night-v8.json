@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.licham.widget.calendar-widget-release-3:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values-night/colors.xml",
+                    "from": {
+                        "startLines": "5,2,6,4,3",
+                        "startColumns": "2,2,2,2,2",
+                        "startOffsets": "219,53,274,165,112",
+                        "endColumns": "54,58,64,53,52",
+                        "endOffsets": "271,109,336,216,162"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,240,296",
+                        "endColumns": "56,60,66,55,54",
+                        "endOffsets": "107,168,235,291,346"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.licham.widget.calendar-widget-mergeReleaseResources-1:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/res/values-night/colors.xml",
+                    "from": {
+                        "startLines": "5,2,6,4,3",
+                        "startColumns": "2,2,2,2,2",
+                        "startOffsets": "219,53,274,165,112",
+                        "endColumns": "54,58,64,53,52",
+                        "endOffsets": "271,109,336,216,162"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,240,296",
+                        "endColumns": "56,60,66,55,54",
+                        "endOffsets": "107,168,235,291,346"
+                    }
+                }
+            ]
+        }
+    ]
+}

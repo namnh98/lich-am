@@ -1,0 +1,18 @@
+.desktop-calendar-ui {
+  --desktop-accent: #a33b2f;
+  --desktop-background: #f7f7f4;
+  --desktop-foreground: #2d2926;
+
+  display: flex;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.desktop-calendar-ui > * {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}

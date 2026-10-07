@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Lịch Âm",
+    "slug": "lich-am",
+    "version": "0.1.5",
+    "icon": "./assets/app-icon.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "buildNumber": "6",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.licham.mobile"
+    },
+    "android": {
+      "versionCode": 6,
+      "adaptiveIcon": {
+        "backgroundColor": "#C72C25",
+        "foregroundImage": "./assets/app-icon.png"
+      },
+      "package": "com.licham.mobile"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-notifications",
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "VietnameseCalendar",
+              "displayName": "Lịch Việt",
+              "description": "Xem nhanh ngày dương, ngày âm và Can Chi.",
+              "ios": {
+                "supportedFamilies": [
+                  "systemSmall",
+                  "systemMedium"
+                ],
+                "contentMarginsDisabled": true
+              }
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

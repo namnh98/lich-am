@@ -1,0 +1,38 @@
+{
+  "name": "@lich-am/mobile",
+  "version": "0.1.5",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "dev": "expo start",
+    "android": "NODE_ENV=development expo run:android --app-id com.licham.mobile.debug",
+    "ios": "NODE_ENV=development expo run:ios",
+    "release:android": "node scripts/build-android-release.mjs",
+    "release:android:apk": "node scripts/build-android-release.mjs --apk",
+    "release:ios": "expo run:ios --configuration Release",
+    "build": "node scripts/export-native.mjs",
+    "lint": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "version:mobile": "node scripts/mobile-version.mjs"
+  },
+  "dependencies": {
+    "@expo/ui": "~56.0.26",
+    "@lich-am/ui": "*",
+    "@lich-oi/core": "*",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "expo": "~56.0.5",
+    "expo-notifications": "^0.30.7",
+    "expo-sqlite": "~56.0.6",
+    "expo-status-bar": "~56.0.4",
+    "expo-widgets": "~56.0.27",
+    "firebase": "^12.19.0",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-safe-area-context": "~5.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  }
+}

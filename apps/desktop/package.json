@@ -1,0 +1,39 @@
+{
+  "name": "@lich-am/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "dev:web": "vite",
+    "build": "tauri build",
+    "build:web": "tsc --noEmit && vite build",
+    "release:macos": "tauri build --bundles app,dmg",
+    "release:windows": "tauri build --bundles msi,nsis",
+    "icons": "tauri icon ../mobile/assets/app-icon.png",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@lich-am/ui": "*",
+    "@lich-oi/core": "*",
+    "@tauri-apps/api": "~2.11.0",
+    "@tauri-apps/plugin-notification": "~2.4.0",
+    "@tauri-apps/plugin-sql": "~2.4.0",
+    "firebase": "^12.19.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "~19.2.2",
+    "@types/react-dom": "~19.2.2",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~6.0.3",
+    "vite": "^7.2.2"
+  }
+}

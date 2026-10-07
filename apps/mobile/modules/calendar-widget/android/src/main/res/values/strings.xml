@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="calendar_widget_name">Lịch Việt</string>
+  <string name="calendar_widget_description">Ngày dương, ngày âm và Can Chi hôm nay</string>
+  <string name="calendar_widget_open_to_sync">Mở app để đồng bộ</string>
+  <string name="calendar_widget_lunar_placeholder">Âm lịch —</string>
+  <string name="calendar_widget_lunar">Âm lịch %1$s</string>
+  <string name="calendar_widget_solar_label">DƯƠNG LỊCH</string>
+  <string name="calendar_widget_shortcut_add">Thêm widget</string>
+  <string name="calendar_widget_shortcut_add_long">Thêm Lịch Việt ra màn hình chính</string>
+  <string name="calendar_widget_shortcut_settings">Tùy chỉnh</string>
+  <string name="calendar_widget_shortcut_settings_long">Tùy chỉnh widget Lịch Việt</string>
+  <string name="calendar_widget_manual_add">Launcher này không hỗ trợ thêm nhanh. Hãy nhấn giữ màn hình chính và chọn Widget.</string>
+</resources>

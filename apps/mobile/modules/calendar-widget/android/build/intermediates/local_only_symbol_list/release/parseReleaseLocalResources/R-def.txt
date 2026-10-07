@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color calendar_widget_accent
+color calendar_widget_background
+color calendar_widget_lunar_background
+color calendar_widget_muted
+color calendar_widget_text
+drawable calendar_widget_background
+drawable calendar_widget_background_dark
+drawable calendar_widget_lunar_badge
+drawable calendar_widget_shortcut_add
+drawable calendar_widget_shortcut_settings
+id widget_brand
+id widget_can_chi
+id widget_events
+id widget_lunar_date
+id widget_root
+id widget_solar_date
+id widget_solar_day
+id widget_solar_label
+id widget_weekday
+layout calendar_widget
+string calendar_widget_description
+string calendar_widget_lunar
+string calendar_widget_lunar_placeholder
+string calendar_widget_manual_add
+string calendar_widget_name
+string calendar_widget_open_to_sync
+string calendar_widget_shortcut_add
+string calendar_widget_shortcut_add_long
+string calendar_widget_shortcut_settings
+string calendar_widget_shortcut_settings_long
+string calendar_widget_solar_label
+xml calendar_widget_info
+xml calendar_widget_shortcuts

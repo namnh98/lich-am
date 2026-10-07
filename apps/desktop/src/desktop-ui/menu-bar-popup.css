@@ -1,0 +1,215 @@
+.menu-bar-popup {
+  --popup-background: #f7f7f4;
+  --popup-border: #e3e4de;
+  --popup-hover: #f0f0ec;
+  --popup-ink: #20211f;
+  --popup-muted: #73766f;
+  --popup-red: #a33a2b;
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 22px 14px;
+  color: var(--popup-ink);
+  background: var(--popup-background);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+.menu-bar-popup[data-theme="dark"] {
+  --popup-background: #151614;
+  --popup-border: #363933;
+  --popup-hover: #292b27;
+  --popup-ink: #f1f2ed;
+  --popup-muted: #a4a79f;
+  --popup-red: #e0705f;
+}
+
+.menu-bar-popup button {
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-bar-popup__header,
+.menu-bar-popup__month-controls,
+.menu-bar-popup__details-row,
+.menu-bar-popup__footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bar-popup__header {
+  margin-bottom: 12px;
+}
+
+.menu-bar-popup__eyebrow {
+  color: var(--popup-red);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin: 0 0 4px;
+}
+
+.menu-bar-popup h1 {
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.menu-bar-popup__today {
+  background: transparent;
+  border: 1px solid var(--popup-border);
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 7px 10px;
+}
+
+.menu-bar-popup__calendar {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--popup-border);
+  padding-bottom: 15px;
+}
+
+.menu-bar-popup__month-controls {
+  color: var(--popup-muted);
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+
+.menu-bar-popup__month-controls button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  font-size: 22px;
+  height: 28px;
+  justify-content: center;
+  line-height: 1;
+  width: 30px;
+}
+
+.menu-bar-popup__month-controls button:hover,
+.menu-bar-popup__today:hover {
+  background: var(--popup-hover);
+}
+
+.menu-bar-popup__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  text-align: center;
+}
+
+.menu-bar-popup__weekdays {
+  color: var(--popup-muted);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0 0 5px;
+}
+
+.menu-bar-popup__days button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+  justify-content: center;
+  line-height: 1.1;
+  min-width: 0;
+  padding: 2px 0;
+}
+
+.menu-bar-popup__days button > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.menu-bar-popup__days button small {
+  color: var(--popup-muted);
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+.menu-bar-popup__days button.is-outside {
+  opacity: 0.38;
+}
+
+.menu-bar-popup__days button.is-today:not(.is-selected) {
+  box-shadow: inset 0 0 0 1px var(--popup-red);
+}
+
+.menu-bar-popup__days button.is-selected {
+  color: #fff;
+  background: var(--popup-red);
+}
+
+.menu-bar-popup__days button.is-selected small {
+  color: #e4eee7;
+}
+
+.menu-bar-popup__details {
+  flex: 1;
+  padding: 14px 1px 12px;
+}
+
+.menu-bar-popup__lunar-date {
+  align-items: baseline;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-bar-popup__lunar-date span,
+.menu-bar-popup__details p,
+.menu-bar-popup__details-row {
+  color: var(--popup-muted);
+  font-size: 12px;
+}
+
+.menu-bar-popup__lunar-date strong {
+  color: var(--popup-red);
+  font-size: 18px;
+}
+
+.menu-bar-popup__details p {
+  margin: 6px 0 12px;
+  text-transform: capitalize;
+}
+
+.menu-bar-popup__details-row {
+  gap: 12px;
+}
+
+.menu-bar-popup__footer {
+  border-top: 1px solid var(--popup-border);
+  color: var(--popup-muted);
+  font-size: 10px;
+  padding-top: 12px;
+}
+
+.menu-bar-popup__footer button {
+  background: transparent;
+  border: 0;
+  color: var(--popup-red);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 0 3px 8px;
+}
+
+.menu-bar-popup__actions {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.menu-bar-popup__footer .menu-bar-popup__quit {
+  color: var(--popup-muted);
+  font-weight: 500;
+}

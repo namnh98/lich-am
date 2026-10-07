@@ -1,0 +1,78 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:1:1-32:12
+	package
+		INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:2:3-31:17
+activity#com.licham.mobile.MainActivity
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:3:5-8:16
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:4:7-52
+meta-data#android.app.shortcuts
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:5:7-7:61
+	android:resource
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:7:9-58
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:6:9-45
+activity#com.licham.widget.CalendarWidgetPinActivity
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:9:5-14:69
+	android:excludeFromRecents
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:11:7-40
+	android:noHistory
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:13:7-31
+	android:exported
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:12:7-30
+	android:theme
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:14:7-66
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:10:7-65
+receiver#com.licham.widget.CalendarWidgetProvider
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:15:5-30:16
+	android:label
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:18:7-51
+	android:exported
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:17:7-30
+	android:permission
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:19:7-61
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:16:7-62
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.LOCALE_CHANGED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.TIMEZONE_CHANGED
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:20:7-26:23
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:21:9-76
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:21:17-73
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:22:9-76
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:22:17-73
+action#android.intent.action.DATE_CHANGED
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:23:9-69
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:23:17-66
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:24:9-73
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:24:17-70
+action#android.intent.action.LOCALE_CHANGED
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:25:9-71
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:25:17-68
+meta-data#android.appwidget.provider
+ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:27:7-29:56
+	android:resource
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:29:9-53
+	android:name
+		ADDED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml:28:9-50
+uses-sdk
+INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml
+INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/namnguyenne/Desktop/react-native/lich-am/apps/mobile/modules/calendar-widget/android/src/main/AndroidManifest.xml

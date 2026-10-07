@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <application>
+    <activity
+      android:name="com.licham.mobile.MainActivity">
+      <meta-data
+        android:name="android.app.shortcuts"
+        android:resource="@xml/calendar_widget_shortcuts" />
+    </activity>
+    <activity
+      android:name="com.licham.widget.CalendarWidgetPinActivity"
+      android:excludeFromRecents="true"
+      android:exported="true"
+      android:noHistory="true"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <receiver
+      android:name="com.licham.widget.CalendarWidgetProvider"
+      android:exported="true"
+      android:label="@string/calendar_widget_name"
+      android:permission="android.permission.BIND_APPWIDGET">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+        <action android:name="android.intent.action.DATE_CHANGED" />
+        <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+        <action android:name="android.intent.action.LOCALE_CHANGED" />
+      </intent-filter>
+      <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/calendar_widget_info" />
+    </receiver>
+  </application>
+</manifest>
