@@ -6,6 +6,7 @@ import { getCurrentWindow } from "@tauri-apps/api/window";
 import { useEffect, useState } from "react";
 
 import { initializeDesktopStorage } from "./storage";
+import desktopPkg from "../package.json";
 import { DesktopCalendarApp } from "./desktop-ui/DesktopCalendarApp";
 import { MenuBarPopup } from "./desktop-ui/MenuBarPopup";
 import { firebaseAuthService } from "./firebase-auth";
@@ -117,7 +118,7 @@ function DesktopMainApp() {
 
   return (
     <DesktopCalendarApp
-      appVersion="0.1.0"
+      appVersion={desktopPkg.version}
       authService={firebaseAuthService}
       eventStore={{
         list: async () => (await initializeDesktopStorage()).events.list(),

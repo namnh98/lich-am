@@ -1,6 +1,6 @@
 {
   "name": "lich-am",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -11,6 +11,10 @@
     "dev:mobile": "npm run start --workspace=@lich-am/mobile",
     "dev:desktop": "npm run dev --workspace=@lich-am/desktop",
     "build": "turbo run build",
+    "build:pipeline": "node scripts/pipeline.mjs",
+    "build:all": "node scripts/pipeline.mjs --target all",
+    "build:android": "node scripts/pipeline.mjs --target android",
+    "build:desktop": "node scripts/pipeline.mjs --target desktop",
     "release:android": "npm run release:android --workspace=@lich-am/mobile",
     "release:android:apk": "npm run release:android:apk --workspace=@lich-am/mobile",
     "release:ios": "npm run release:ios --workspace=@lich-am/mobile",
@@ -18,6 +22,7 @@
     "release:windows": "npm run release:windows --workspace=@lich-am/desktop",
     "lint": "turbo run lint",
     "test": "turbo run test",
+    "version:sync": "node scripts/pipeline.mjs --dry-run",
     "version:mobile": "node apps/mobile/scripts/mobile-version.mjs"
   },
   "devDependencies": {

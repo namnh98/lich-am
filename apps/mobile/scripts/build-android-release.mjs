@@ -14,9 +14,14 @@ const REQUIRED_SIGNING_VARIABLES = [
 
 const missingVariables = REQUIRED_SIGNING_VARIABLES.filter((name) => !process.env[name]);
 if (missingVariables.length > 0) {
-  console.error(`Thiếu biến môi trường ký Android: ${missingVariables.join(", ")}`);
-  console.error("Xem mục Build release trong README.md để cấu hình keystore.");
-  process.exit(1);
+  if (process.argv.includes("--allow-debug-signing") || process.env.ALLOW_DEBUG_SIGNING === "true") {
+    console.warn(`⚠️ [CẢNH BÁO] Thiếu biến ký Android: ${missingVariables.join(", ")}`);
+    console.warn("Tự động ký bằng debug.keystore theo cấu hình Gradle.");
+  } else {
+    console.error(`Thiếu biến môi trường ký Android: ${missingVariables.join(", ")}`);
+    console.error("Xem mục Build release trong README.md hoặc truyền cờ --allow-debug-signing để build thử.");
+    process.exit(1);
+  }
 }
 
 syncMobileVersion();

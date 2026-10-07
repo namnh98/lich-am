@@ -8,6 +8,8 @@ coverage/
 # Expo native output created by prebuild
 apps/mobile/android/
 apps/mobile/ios/
+**/build/
+.gradle/
 
 # Rust / Tauri
 apps/desktop/src-tauri/target/
