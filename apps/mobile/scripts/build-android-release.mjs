@@ -39,7 +39,7 @@ const gradleWrapper = process.platform === "win32" ? "gradlew.bat" : "./gradlew"
 // native dependency.
 rmSync(embeddedBundle, { force: true });
 
-const result = spawnSync(gradleWrapper, [task], {
+const result = spawnSync(gradleWrapper, ["--no-daemon", task], {
   cwd: androidDirectory,
   env: { ...process.env, NODE_ENV: "production" },
   shell: process.platform === "win32",

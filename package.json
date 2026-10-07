@@ -1,6 +1,6 @@
 {
   "name": "lich-am",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -23,7 +23,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "version:sync": "node scripts/pipeline.mjs --dry-run",
-    "version:mobile": "node apps/mobile/scripts/mobile-version.mjs"
+    "version:mobile": "node apps/mobile/scripts/mobile-version.mjs",
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

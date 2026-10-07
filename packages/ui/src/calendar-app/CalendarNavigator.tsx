@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { AuthScreen } from "./AuthScreen";
 import { CalendarView } from "./CalendarView";
 import { NotificationsScreen } from "./NotificationsScreen";
 import { SettingsScreen } from "./SettingsScreen";
@@ -24,6 +25,8 @@ type CalendarNavigatorProps = Pick<
   preferences: CalendarPreferences;
   onPreferencesChange: PreferencesChangeHandler;
   eventStore?: EventStore;
+  onOpenAuth?: () => void;
+  onBackToCalendar?: () => void;
 };
 
 type RouteContext = Omit<
@@ -51,6 +54,7 @@ const routeRenderers: Record<AppScreen, RouteRenderer> = {
     onRequestNotifications,
     authService,
     widgetAvailable,
+    onOpenAuth,
   }) => (
     <SettingsScreen
       onAddWidget={onAddWidget}
@@ -61,6 +65,14 @@ const routeRenderers: Record<AppScreen, RouteRenderer> = {
       platform={platform}
       preferences={preferences}
       widgetAvailable={widgetAvailable}
+      onOpenAuth={onOpenAuth}
+    />
+  ),
+  auth: ({ authService, onBackToCalendar }) => (
+    <AuthScreen
+      authService={authService}
+      onSuccess={onBackToCalendar ?? (() => {})}
+      onCancel={onBackToCalendar}
     />
   ),
 };

@@ -54,6 +54,7 @@ export function CalendarShell({
         onBack={navigation.showCalendar}
         onOpenNotifications={navigation.showNotifications}
         onOpenSettings={navigation.showSettings}
+        onOpenAuth={navigation.showAuth}
         appVersion={appVersion}
         screen={navigation.screen}
       />
@@ -71,6 +72,8 @@ export function CalendarShell({
           preferences={preferences}
           screen={navigation.screen}
           widgetAvailable={widgetAvailable}
+          onOpenAuth={navigation.showAuth}
+          onBackToCalendar={navigation.showCalendar}
         />
       </ScrollView>
     </Screen>

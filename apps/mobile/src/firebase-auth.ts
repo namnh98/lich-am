@@ -7,11 +7,13 @@ import {
   initializeAuth,
   onAuthStateChanged,
   sendPasswordResetEmail,
+  signInAnonymously,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
   type Auth,
 } from "firebase/auth";
-import type { AuthService } from "@lich-am/ui";
+import type { AuthService, AuthUser } from "@lich-am/ui";
 
 const config = {
   apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
@@ -47,30 +49,67 @@ if (configured) {
 
 const configuredAuth = auth;
 
+function toAuthUser(user?: Auth["currentUser"] | null): AuthUser | null {
+  if (!user) return null;
+  return {
+    email: user.email,
+    displayName: user.displayName,
+    photoURL: user.photoURL,
+    uid: user.uid,
+    isAnonymous: user.isAnonymous,
+  };
+}
+
+const activeListeners = new Set<(user: AuthUser | null) => void>();
+
+function broadcastAuthState() {
+  const currentUser = configuredAuth?.currentUser;
+  const authUser = toAuthUser(currentUser);
+  for (const listener of activeListeners) {
+    listener(authUser);
+  }
+}
+
 export const firebaseAuthService: AuthService | undefined = configuredAuth
   ? {
-      subscribe: (listener) =>
-        onAuthStateChanged(
+      subscribe: (listener) => {
+        activeListeners.add(listener);
+        const unsubscribe = onAuthStateChanged(
           configuredAuth,
-          (user) =>
-            listener(
-              user
-                ? { email: user.email, displayName: user.displayName }
-                : null,
-            ),
+          (user) => {
+            listener(toAuthUser(user));
+          },
           (error) => console.error("Firebase auth state listener failed", error),
-        ),
+        );
+        return () => {
+          activeListeners.delete(listener);
+          unsubscribe();
+        };
+      },
       signIn: async (email, password) => {
         await signInWithEmailAndPassword(configuredAuth, email, password);
       },
       createAccount: async (email, password) => {
         await createUserWithEmailAndPassword(configuredAuth, email, password);
       },
+      signInAnonymously: async () => {
+        await signInAnonymously(configuredAuth);
+      },
       signOut: async () => {
         await signOut(configuredAuth);
       },
       resetPassword: async (email) => {
         await sendPasswordResetEmail(configuredAuth, email);
+      },
+      updateProfile: async (profile) => {
+        if (!configuredAuth.currentUser) {
+          throw new Error("Người dùng chưa đăng nhập.");
+        }
+        await updateProfile(configuredAuth.currentUser, {
+          displayName: profile.displayName,
+          photoURL: profile.photoURL,
+        });
+        broadcastAuthState();
       },
     }
   : undefined;

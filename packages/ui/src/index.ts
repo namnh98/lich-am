@@ -1,5 +1,7 @@
 export * from "./components";
 export * from "./LunarCalendarApp";
+export * from "./calendar-app/AuthScreen";
+export * from "./calendar-app/UserProfileCard";
 export type { AuthService, AuthUser } from "./calendar-app/types";
 export * from "./calendar/CalendarGrid";
 export * from "./calendar/DayCard";

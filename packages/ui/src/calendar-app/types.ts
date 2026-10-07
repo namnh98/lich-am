@@ -4,19 +4,24 @@ import type { LocalEvent } from "@lich-oi/core";
 export type ThemePreference = "system" | ThemeMode;
 export type WidgetDisplay = "compact" | "detail" | "agenda" | "month";
 export type WidgetDensity = "compact" | "balanced" | "spacious";
-export type AppScreen = "calendar" | "settings" | "notifications";
+export type AppScreen = "calendar" | "settings" | "notifications" | "auth";
 
 export interface AuthUser {
   email: string | null;
   displayName: string | null;
+  photoURL?: string | null;
+  uid?: string;
+  isAnonymous?: boolean;
 }
 
 export interface AuthService {
   subscribe: (listener: (user: AuthUser | null) => void) => () => void;
   signIn: (email: string, password: string) => Promise<void>;
   createAccount: (email: string, password: string) => Promise<void>;
+  signInAnonymously?: () => Promise<void>;
   signOut: () => Promise<void>;
   resetPassword?: (email: string) => Promise<void>;
+  updateProfile?: (profile: { displayName?: string; photoURL?: string }) => Promise<void>;
 }
 
 export interface CalendarPreferences extends Record<string, string> {

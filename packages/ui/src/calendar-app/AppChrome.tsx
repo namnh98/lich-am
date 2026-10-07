@@ -9,6 +9,7 @@ interface AppHeaderProps {
   onBack: () => void;
   onOpenSettings: () => void;
   onOpenNotifications: () => void;
+  onOpenAuth?: () => void;
   appVersion: string;
   screen: AppScreen;
 }
@@ -23,13 +24,14 @@ export function AppHeader({
   onBack,
   onOpenSettings,
   onOpenNotifications,
+  onOpenAuth,
   appVersion,
   screen,
 }: AppHeaderProps) {
   const currentTheme = useTheme();
   const [menuVisible, setMenuVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
-  if (screen === "settings" || screen === "notifications") {
+  if (screen === "settings" || screen === "notifications" || screen === "auth") {
     return (
       <View
         style={[
@@ -43,7 +45,11 @@ export function AppHeader({
           onPress={onBack}
         />
         <AppText style={styles.screenTitle}>
-          {screen === "settings" ? "CÀI ĐẶT" : "THÔNG BÁO"}
+          {screen === "settings"
+            ? "CÀI ĐẶT"
+            : screen === "notifications"
+              ? "THÔNG BÁO"
+              : "ĐĂNG NHẬP"}
         </AppText>
         <View style={styles.headerSpacer} />
       </View>
@@ -90,6 +96,16 @@ export function AppHeader({
             ]}
           >
             <AppText variant="title">LỊCH VIỆT</AppText>
+            {onOpenAuth ? (
+              <HeaderButton
+                accessibilityLabel="Mở tài khoản"
+                label="Tài khoản / Đăng nhập"
+                onPress={() => {
+                  setMenuVisible(false);
+                  onOpenAuth();
+                }}
+              />
+            ) : null}
             <HeaderButton
               accessibilityLabel="Mở cài đặt"
               label="Cài đặt"

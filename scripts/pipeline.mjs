@@ -250,8 +250,8 @@ function buildAndroid({ variant, format, allowDebugSigning }) {
     ALLOW_DEBUG_SIGNING: allowDebugSigning ? "true" : "false",
   };
 
-  console.log(`   ▶ Chạy lệnh Gradle: ${gradlew} ${gradleTask}`);
-  const result = spawnSync(gradlew, [gradleTask], {
+  console.log(`   ▶ Chạy lệnh Gradle: ${gradlew} --no-daemon ${gradleTask}`);
+  const result = spawnSync(gradlew, ["--no-daemon", gradleTask], {
     cwd: androidAppDir,
     env,
     shell: process.platform === "win32",

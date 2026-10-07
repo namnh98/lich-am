@@ -17,6 +17,8 @@ export function useAppNavigationViewModel(
   const showCalendar = useCallback(() => setScreen("calendar"), []);
   const showSettings = useCallback(() => setScreen("settings"), []);
   const showNotifications = useCallback(() => setScreen("notifications"), []);
+  const showAuth = useCallback(() => setScreen("auth"), []);
+  const navigateTo = useCallback((target: AppScreen) => setScreen(target), []);
 
   useEffect(() => {
     if (screen === "calendar") return;
@@ -30,5 +32,5 @@ export function useAppNavigationViewModel(
     return () => subscription.remove();
   }, [screen, showCalendar]);
 
-  return { screen, showCalendar, showNotifications, showSettings };
+  return { screen, showCalendar, showNotifications, showSettings, showAuth, navigateTo };
 }

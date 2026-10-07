@@ -1,6 +1,6 @@
 {
   "name": "@lich-am/mobile",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "main": "index.ts",
   "scripts": {
@@ -22,7 +22,7 @@
     "@lich-oi/core": "*",
     "@react-native-async-storage/async-storage": "^3.1.1",
     "expo": "~56.0.5",
-    "expo-notifications": "^0.30.7",
+    "expo-notifications": "~56.0.26",
     "expo-sqlite": "~56.0.6",
     "expo-status-bar": "~56.0.4",
     "expo-widgets": "~56.0.27",

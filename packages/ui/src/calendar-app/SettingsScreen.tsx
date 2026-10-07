@@ -6,7 +6,7 @@ import { theme } from "../theme";
 import { ThemeSettingsCard } from "./ThemeSettingsCard";
 import { ActionButton } from "../primitives/ActionButton";
 import type { AuthService, CalendarPreferences, PreferencesChangeHandler } from "./types";
-import { AuthSettingsCard } from "./AuthSettingsCard";
+import { UserProfileCard } from "./UserProfileCard";
 import { useSettingsViewModel } from "./useSettingsViewModel";
 import { WidgetSettingsCard } from "./WidgetSettingsCard";
 import { DesktopSettingsCard } from "./DesktopSettingsCard";
@@ -20,6 +20,7 @@ export function SettingsScreen({
   preferences,
   widgetAvailable,
   authService,
+  onOpenAuth,
 }: {
   mobilePlatform?: "android" | "ios";
   onAddWidget?: () => void;
@@ -29,6 +30,7 @@ export function SettingsScreen({
   preferences: CalendarPreferences;
   widgetAvailable: boolean;
   authService?: AuthService;
+  onOpenAuth?: () => void;
 }) {
   const viewModel = useSettingsViewModel(onChange);
   const [permissionMessage, setPermissionMessage] = useState<string | null>(
@@ -55,7 +57,7 @@ export function SettingsScreen({
         onSelect={viewModel.selectTheme}
         selected={preferences.theme}
       />
-      <AuthSettingsCard authService={authService} />
+      <UserProfileCard authService={authService} onOpenAuth={onOpenAuth} />
       {platform === "desktop" ? (
         <DesktopSettingsCard
           onSelect={(value) => onChange({ pinToMenuBar: value })}

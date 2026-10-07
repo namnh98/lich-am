@@ -51,10 +51,10 @@ export function useCalendarViewModel(
       }
     };
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
       window.addEventListener("focus", handleFocus);
     }
-    if (typeof document !== "undefined") {
+    if (typeof document !== "undefined" && typeof document.addEventListener === "function") {
       document.addEventListener("visibilitychange", handleVisibility);
     }
     const appStateSub = AppState.addEventListener?.("change", (state) => {
@@ -65,10 +65,10 @@ export function useCalendarViewModel(
 
     return () => {
       clearInterval(interval);
-      if (typeof window !== "undefined") {
+      if (typeof window !== "undefined" && typeof window.removeEventListener === "function") {
         window.removeEventListener("focus", handleFocus);
       }
-      if (typeof document !== "undefined") {
+      if (typeof document !== "undefined" && typeof document.removeEventListener === "function") {
         document.removeEventListener("visibilitychange", handleVisibility);
       }
       appStateSub?.remove?.();
