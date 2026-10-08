@@ -302,7 +302,7 @@ function buildDesktop({ variant, bundles }) {
 
   // First build frontend web assets
   console.log("   ▶ Biên dịch Frontend Web (Vite)...");
-  const webBuildResult = spawnSync("npm", ["run", "build:web"], {
+  const webBuildResult = spawnSync("pnpm", ["run", "build:web"], {
     cwd: desktopDir,
     shell: true,
     stdio: "inherit",

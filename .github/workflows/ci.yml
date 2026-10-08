@@ -10,16 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Ensure Linux native bindings (npm #4828 workaround)
-        run: npm i --no-save @rolldown/binding-linux-x64-gnu @rollup/rollup-linux-x64-gnu @esbuild/linux-x64
-      - run: npm run lint --workspace=@lich-am/mobile
-      - run: npm run test --workspace=@lich-am/mobile
-      - run: npm run lint --workspace=@lich-am/desktop
-      - run: npm run build:web --workspace=@lich-am/desktop
-      - run: npm run lint --workspace=@lich-am/ui
-      - run: npm run test --workspace=@lich-am/ui
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @lich-am/mobile run lint
+      - run: pnpm --filter @lich-am/mobile run test
+      - run: pnpm --filter @lich-am/desktop run lint
+      - run: pnpm --filter @lich-am/desktop run build:web
+      - run: pnpm --filter @lich-am/ui run lint
+      - run: pnpm --filter @lich-am/ui run test
