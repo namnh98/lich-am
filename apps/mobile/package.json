@@ -1,6 +1,6 @@
 {
   "name": "@lich-am/mobile",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "main": "index.ts",
   "scripts": {
@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@expo/ui": "~56.0.26",
-    "@lich-am/ui": "*",
-    "@lich-oi/core": "*",
+    "@lich-am/ui": "workspace:*",
+    "@lich-oi/core": "workspace:*",
     "@react-native-async-storage/async-storage": "^3.1.1",
     "expo": "~56.0.5",
     "expo-notifications": "~56.0.26",

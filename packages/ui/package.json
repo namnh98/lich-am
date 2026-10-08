@@ -17,7 +17,7 @@
     "react-native": ">=0.76"
   },
   "dependencies": {
-    "@lich-oi/core": "*",
+    "@lich-oi/core": "workspace:*",
     "react-native-safe-area-context": "~5.7.0"
   },
   "devDependencies": {

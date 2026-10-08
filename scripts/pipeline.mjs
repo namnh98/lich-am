@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -270,6 +270,21 @@ function buildAndroid({ variant, format, allowDebugSigning }) {
     outputArtifactPath = resolve(androidAppDir, "app/build/outputs/bundle/release/app-release.aab");
   } else {
     outputArtifactPath = resolve(androidAppDir, "app/build/outputs/apk/release/app-release.apk");
+    const releaseApkDir = resolve(androidAppDir, "app/build/outputs/apk/release");
+    if (existsSync(releaseApkDir)) {
+      const apks = readdirSync(releaseApkDir).filter((file) => file.endsWith(".apk"));
+      if (apks.length > 0) {
+        console.log(`\n📦 Danh sách Android APK xuất ra (${apks.length} file):`);
+        for (const file of apks) {
+          const filePath = resolve(releaseApkDir, file);
+          const stat = statSync(filePath);
+          console.log(`   ✓ ${file.padEnd(35)} : ${formatBytes(stat.size)}`);
+        }
+        if (!existsSync(outputArtifactPath)) {
+          outputArtifactPath = resolve(releaseApkDir, apks[0]);
+        }
+      }
+    }
   }
 
   if (existsSync(outputArtifactPath)) {

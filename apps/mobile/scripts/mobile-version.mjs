@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, realpathSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, realpathSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 
@@ -14,7 +14,7 @@ export function syncMobileVersion(command = "sync", explicitBuild) {
   const lockPath = resolve(rootDirectory, "package-lock.json");
   const config = readJson(configPath);
   const pkg = readJson(packagePath);
-  const lock = readJson(lockPath);
+  const lock = existsSync(lockPath) ? readJson(lockPath) : null;
   const current = config.expo.version;
   const currentBuild = config.expo.android.versionCode;
   if (
@@ -67,10 +67,12 @@ export function syncMobileVersion(command = "sync", explicitBuild) {
   // Keep Expo iOS configuration aligned; native iOS projects need prebuild.
   config.expo.ios.buildNumber = String(build);
   pkg.version = version;
-  lock.packages["apps/mobile"].version = version;
+  if (lock && lock.packages?.["apps/mobile"]) {
+    lock.packages["apps/mobile"].version = version;
+    writeJson(lockPath, lock);
+  }
   writeJson(configPath, config);
   writeJson(packagePath, pkg);
-  writeJson(lockPath, lock);
   console.log(`Mobile version: ${version} (${build})`);
   return { version, build };
 }
